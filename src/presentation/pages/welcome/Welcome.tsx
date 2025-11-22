@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Button, theme } from 'rick-morty-components-lib';
-import background from '../../../assets/backgound.png';
-import logo from '../../../assets/brand-logo.svg';
+import background from '@/assets/backgound.png';
+import logo from '@/assets/brand-logo.svg';
 
 export const Welcome = () => {
   const navigation = useNavigate();
