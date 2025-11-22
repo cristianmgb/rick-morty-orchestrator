@@ -20,6 +20,8 @@ export default defineConfig(({ mode }) => {
           '@mui/material',
           '@emotion/react',
           '@emotion/styled',
+          'rick-morty-components-lib',
+          'react-router-dom',
         ],
       }),
     ],
