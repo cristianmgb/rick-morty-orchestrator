@@ -1,7 +1,10 @@
 // Declaración para el microfrontend de Characters
 declare module 'characters/App' {
   import { ComponentType } from 'react';
-  const App: ComponentType;
+  interface AppProps {
+    search?: string;
+  }
+  const App: ComponentType<AppProps>;
   export default App;
 }
 

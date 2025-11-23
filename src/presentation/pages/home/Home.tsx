@@ -1,6 +1,7 @@
+import { lazy, Suspense } from 'react';
 import { Alert, Box, CircularProgress } from '@mui/material';
 import { Layout } from '@/presentation/layout/Layout';
-import { lazy, Suspense } from 'react';
+import { useGlobalStore } from '@/presentation/store/useGlogalStore';
 
 const CharactersApp = lazy(() =>
   import('characters/App')
@@ -24,6 +25,7 @@ const CharactersApp = lazy(() =>
 );
 
 export const Home = () => {
+  const { query } = useGlobalStore();
   return (
     <Layout>
       <Box
@@ -37,15 +39,14 @@ export const Home = () => {
           flexDirection: 'column',
         }}
       >
-        {' '}
         <Suspense
           fallback={
             <Box sx={{ display: 'flex', justifyContent: 'center', py: 10 }}>
-              <CircularProgress sx={{ color: '#64B5F6' }} />
+              <CircularProgress sx={{ color: '#045d11ff' }} />
             </Box>
           }
         >
-          <CharactersApp />
+          <CharactersApp search={query} />
         </Suspense>
       </Box>
     </Layout>
