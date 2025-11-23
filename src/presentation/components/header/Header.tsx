@@ -2,8 +2,10 @@ import { Box } from '@mui/material';
 import logo from '@/assets/brand-logo.svg';
 import background from '@/assets/backgound.png';
 import { InputSearch } from 'rick-morty-components-lib';
+import { useGlobalStore } from '@/presentation/store/useGlogalStore';
 
 export const Header = () => {
+  const setQuery = useGlobalStore((state) => state.setQuery);
   return (
     <Box
       position="relative"
@@ -55,7 +57,7 @@ export const Header = () => {
           zIndex: 1,
         }}
       >
-        <InputSearch onChange={() => {}} />
+        <InputSearch onChange={setQuery} />
       </Box>
     </Box>
   );
