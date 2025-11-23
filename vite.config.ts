@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => {
           '@emotion/styled',
           'rick-morty-components-lib',
           'react-router-dom',
+          '@tanstack/react-query',
         ],
       }),
     ],
