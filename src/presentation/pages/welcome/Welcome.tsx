@@ -84,12 +84,19 @@ export const Welcome = () => {
             siguiente diseño.
           </Typography>
         </Box>
-        <Button
-          backgroundColor={theme.palette.primary['500']}
-          color={theme.palette.primary['900']}
-          text="comenzar"
-          onClick={() => navigation('/home')}
-        />
+        <Box sx={{ display: 'flex', gap: '16px' }}>
+          <Button
+            backgroundColor={theme.palette.primary['500']}
+            color={theme.palette.primary['900']}
+            text="Personajes"
+            onClick={() => navigation('/home')}
+          />
+          <Button
+            text="Lugares"
+            onClick={() => navigation('/locations')}
+            backgroundColor={theme.palette.primary['500']}
+          />
+        </Box>
       </Box>
     </Box>
   );

@@ -2,6 +2,7 @@ import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import { Welcome } from '@/presentation/pages/welcome/Welcome';
 import { Home } from '@/presentation/pages/home/Home';
+import { Locations } from '@/presentation/pages/locations/Locations';
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
         <Route
           path="/home"
           element={<Home />}
+        />
+        <Route
+          path="/locations"
+          element={<Locations />}
         />
         <Route
           path="*"
